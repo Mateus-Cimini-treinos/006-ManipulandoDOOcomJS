@@ -1,0 +1,45 @@
+<!-- Aprendendo a manipular o DOM-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: #333;
+            color: aliceblue;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Iniciando estudos com DOM</h1>
+    <h1 id="teste">teste</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em js</p>
+    <div id="msg">Clique aqui</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1] //atribuindo a variavel "p1" com o segundo <p>usando a funçao getElementsByTAgName  para indentificar pela tag
+       window.document.writeln("copiando o segundo parargrafo: "+p1.innerText) //escrevendo na tela a o texto variavel usando o innerText
+       window.document.write("copiando o segundo parargrafo: "+p1.innerHTML) //escrevendo na tela a o texto variavel usando o innerHtml para presevar suas atribuiçoes como <strong>
+
+
+  
+          var t = window.document.getElementById('msg')//atribuindo a variavel "clique" com a <div> usando a funçao getElementsById para indentificar pelo  Id
+
+            t.style.background = 'green' // mudando a cor de fundo de t
+
+            var tt = window.document.querySelector('h1#teste') // usando o querySelector para selecionar o h1 com id teste
+
+            tt.style.color = 'blue' //transformando a cor dele para azul
+           
+
+    </script>
+    
+</body>
+</html>
